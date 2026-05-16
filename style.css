@@ -8,24 +8,21 @@
     height:100px; 
 }
 
-body {
-    display:grid;
-    grid-template-rows: 1fr 3fr 1fr;
-    grid-template-areas:
-    "header"
-    "main"
-    "footer"
 
-}
 
 header {
-    grid-area:header;
     background-color:grey;
     display:flex;
+    justify-content: center;
+    align-items: center;
+    padding:30px;
 }
 
 main {
     grid-area:main;
+    background-color: rgb(212, 179, 138);
+    display:flex;
+    min-height:100vh;
 }
 
 footer {
@@ -35,3 +32,60 @@ footer {
 
 /* flexbox for children of main parts*/
 
+.headerContainer {
+    display:flex;
+    justify-content: center;
+   
+    padding:5px;
+    flex-wrap:wrap;
+    align-items: start;
+}
+
+.srvImgContainer {
+    flex:1;
+    max-width: 400px;
+    min-width: 300px;
+    
+    position: relative;
+    z-index: 2;
+
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+}
+
+.headerScriptContainer {
+    background-color: white;
+    flex:1;
+    padding:3rem;
+    padding-left:4em;
+    min-width:300px;
+
+    position: relative;
+    left: -40px;   /* creates overlap */
+    top: 50px;     /* slight vertical offset */
+    z-index: 1;
+}
+
+.srvImage {
+    display:block;
+    width:100%;
+    height:auto;
+}
+
+@media (max-width: 782px) {
+
+    .headerContainer {
+      flex-direction: column;
+      align-items: stretch;
+    }
+  
+    .srvImgContainer {
+        max-width: 100%;
+
+    }
+    .headerScriptContainer {
+      max-width: 100%;
+      left: 0px;   /* creates overlap */
+        top:0px; 
+    }
+  
+  
