@@ -1,13 +1,14 @@
 .socials {
-    width:100px;
-    height:100px;
+    width:100%;
+    height:20px;
+    display:flex;
+    justify-content: flex-end;
 }
 
 .contact {
     width:100px;
     height:100px; 
 }
-
 
 
 header {
@@ -21,8 +22,12 @@ header {
 main {
     grid-area:main;
     background-color: rgb(212, 179, 138);
-    display:flex;
     min-height:100vh;
+    padding:50px;
+    padding-top:100px;
+    display:flex;
+    justify-content:center;
+    align-items: center;
 }
 
 footer {
@@ -31,11 +36,11 @@ footer {
 }
 
 /* flexbox for children of main parts*/
+/*header*/
 
 .headerContainer {
     display:flex;
     justify-content: center;
-   
     padding:5px;
     flex-wrap:wrap;
     align-items: start;
@@ -63,6 +68,8 @@ footer {
     left: -40px;   /* creates overlap */
     top: 50px;     /* slight vertical offset */
     z-index: 1;
+
+    
 }
 
 .srvImage {
@@ -70,6 +77,33 @@ footer {
     width:100%;
     height:auto;
 }
+
+
+/*main*/
+section {
+    min-width:100%;
+    height:100vh;
+    display:flex;
+    justify-content:space-around;
+    align-items: center;
+    flex-direction: column;
+    padding:40px;
+}
+
+.contentContainer {
+    display:flex;
+    min-width:100%;
+    justify-content: space-between;
+    
+}
+
+.content {
+    background-color: orange;
+}
+
+
+/* mobile settings*/
+/*header*/
 
 @media (max-width: 782px) {
 
@@ -85,7 +119,6 @@ footer {
     .headerScriptContainer {
       max-width: 100%;
       left: 0px;   /* creates overlap */
-        top:0px; 
+       top:0px; 
     }
-  
-  
+}
