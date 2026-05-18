@@ -18,16 +18,16 @@ body {
 
 
 header {
-    background-color:grey;
     display:flex;
     justify-content: center;
     align-items: center;
     padding:30px;
+    background:transparent;
+    background: grey;
 }
 
 main {
-    grid-area:main;
-    background-color: rgb(212, 179, 138);
+    background: rgb(212, 179, 138);
     padding:50px;
     padding-top:100px;
     display:flex;
@@ -35,11 +35,15 @@ main {
     align-items: center;
     flex-grow:1;
 
+
 }
 
 footer {
-    background-color:grey;
     padding:30px;
+    display:flex;
+    gap:20px;
+    background: grey;
+    justify-content:center;
 }
 
 /* flexbox for children of main parts*/
@@ -99,7 +103,6 @@ section {
     
 }
 
-
 .content  {
     flex-basis:500px;
     padding:30px;
@@ -109,15 +112,16 @@ section {
     display:flex;
     width:100%;
     height:auto;
-    background-color:rgb(215, 186, 150);
-    padding:10px;
-   
+}
+
+.contentInfo {
+    background-color:rgb(243, 217, 186) ;
+
 }
 
 .contentImages img {
     margin-right: auto;
     margin-left: auto;
-
 }
 
 
@@ -140,4 +144,22 @@ section {
       left: 0px;   /* creates overlap */
        top:0px; 
     }
+}
+
+
+/*footer*/
+
+
+
+.stratImage {
+    flex-basis:500px;
+}
+
+.contact img {
+    height:30px;
+}
+
+.stratImage img {
+    width:100%;
+    height:auto;
 }
